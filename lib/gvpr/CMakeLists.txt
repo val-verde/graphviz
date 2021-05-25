@@ -4,10 +4,12 @@ add_executable(mkdefs
 )
 
 # Generate gdefs.h from sources
+if (NOT MKDEFS_EXECUTABLE)
 if (WIN32)
     set (MKDEFS_EXECUTABLE "${CMAKE_CFG_INTDIR}/mkdefs")
 else()
     set (MKDEFS_EXECUTABLE "./mkdefs")
+endif()
 endif()
 add_custom_command(
     OUTPUT gdefs.h
