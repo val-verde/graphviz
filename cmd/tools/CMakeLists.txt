@@ -86,6 +86,10 @@ target_link_libraries(dijkstra
     ingraphs
 )
 
+if (MINGW)
+    target_link_libraries(dijkstra crtdll)
+endif()
+
 tool_defaults(dijkstra)
 
 # =================================== gml2gv ===================================
@@ -395,14 +399,14 @@ endif(EXPAT_FOUND)
 
 # ===================== Install third party DLLs on Windows ====================
 
-if (WIN32 AND EXPAT_FOUND)
+if (MSVC AND EXPAT_FOUND)
     install(
         FILES ${EXPAT_RUNTIME_LIBRARIES}
         DESTINATION ${BINARY_INSTALL_DIR}
     )
-endif(WIN32 AND EXPAT_FOUND)
+endif(MSVC AND EXPAT_FOUND)
 
-if (WIN32)
+if (MSVC)
     install(
         FILES ${Getopt_RUNTIME_LIBRARIES}
         DESTINATION ${BINARY_INSTALL_DIR}
