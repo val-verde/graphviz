@@ -12,7 +12,7 @@ add_custom_command(
     ARGS -P ${CMAKE_CURRENT_SOURCE_DIR}/exparse-replacements.cmake
 )
 
-if (WIN32)
+if (MSVC)
     add_custom_command(
         OUTPUT exparse.h
         MAIN_DEPENDENCY y.tab.h
