@@ -65,7 +65,7 @@ target_link_libraries(gvc PUBLIC
     ${MATH_LIB}
 )
 
-if (NOT WIN32)
+if (NOT MSVC)
     target_link_libraries(gvc PUBLIC ${LTDL_LIBRARIES})
 endif()
 
