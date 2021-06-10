@@ -21,9 +21,9 @@ extern "C" {
 
 #ifdef GVDLL
 #ifdef EXPORT_CDT
-#define CDT_API __declspec(dllexport)
+#define CDT_API extern __declspec(dllexport)
 #else
-#define CDT_API __declspec(dllimport)
+#define CDT_API extern __declspec(dllimport)
 #endif
 #endif
 

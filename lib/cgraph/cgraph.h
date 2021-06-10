@@ -29,9 +29,9 @@ extern "C" {
 
 #ifdef GVDLL
 #ifdef EXPORT_CGRAPH
-#define CGRAPH_API __declspec(dllexport)
+#define CGRAPH_API extern __declspec(dllexport)
 #else
-#define CGRAPH_API __declspec(dllimport)
+#define CGRAPH_API extern __declspec(dllimport)
 #endif
 #endif
 
