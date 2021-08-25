@@ -106,10 +106,6 @@ target_link_libraries(dijkstra
   ingraphs
 )
 
-if (MINGW)
-    target_link_libraries(dijkstra crtdll)
-endif()
-
 tool_defaults(dijkstra)
 
 # =================================== gml2gv ===================================
