@@ -19,6 +19,7 @@ target_link_libraries(gvplugin_dot_layout
     cgraph
     dotgen
     gvc
+    ortho_obj
     pathplan
 )
 

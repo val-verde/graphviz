@@ -21,6 +21,7 @@ target_link_libraries(gvplugin_neato_layout
     fdpgen
     gvc
     neatogen
+    ortho_obj
     osage
     patchwork
     pathplan

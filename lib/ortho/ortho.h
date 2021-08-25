@@ -22,4 +22,4 @@
 #define ORTHO_API /* nothing */
 #endif
 
-ORTHO_API void orthoEdges (Agraph_t* g, int useLbls);
+void orthoEdges (Agraph_t* g, int useLbls);
