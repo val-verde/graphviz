@@ -45,7 +45,6 @@ if (WIN32)
     install(
         FILES
             ${Cairo_RUNTIME_LIBRARIES}
-            ${PangoCairo_RUNTIME_LIBRARIES}
         DESTINATION ${BINARY_INSTALL_DIR}
     )
 endif()
